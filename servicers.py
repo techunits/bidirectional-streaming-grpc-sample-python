@@ -11,6 +11,10 @@ class SampleServiceServicer(sample_pb2_grpc.SampleServiceServicer):
         entry_info = dict()
         for request in request_iterator:
             print(request)
+
+            ##### save to database #####
+
+            # simulate the response after saving to database
             entry_info = {
                 "id": str(uuid.uuid4()),
                 "title": request.title,
